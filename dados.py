@@ -26,11 +26,15 @@ FRASES = [
     "A vida começa no final da sua zona de conforto.",
     "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
     "Seja a mudança que você deseja ver no mundo.",
+<<<<<<< HEAD
     "Não pare quando estiver cansado. Pare quando tiver terminado.",
     "O futuro pertence àqueles que acreditam na beleza de seus sonhos.",
     "Nunca é tarde demais para ser o que você poderia ter sido.",
     "A felicidade não é algo pronto. Ela é feita das suas próprias ações.",
     "Se você pode sonhar, você pode realizar.",
     "Tudo o que a mente humana pode conceber e acreditar, ela pode conquistar."
+=======
+    "Não pare quando estiver cansado. Pare quando tiver terminado."
+>>>>>>> V2
     
 ]

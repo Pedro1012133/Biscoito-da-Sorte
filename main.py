@@ -5,7 +5,10 @@ PROJETO BISCOITO DA SORTE
 import flet as ft
 import random
 from dados import FRASES
+<<<<<<< HEAD
 
+=======
+>>>>>>> V2
 
 # ============================================================================
 # Estado da Aplicação
