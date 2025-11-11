@@ -17,4 +17,15 @@ FRASES = [
     "Acredite em milagres, mas não dependa deles.",
     "A sorte favorece a mente bem preparada.",
     "Seu esforço será recompensado.",
+    "Acredite em si mesmo e tudo será possível.",
+    "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+    "Não espere por oportunidades extraordinárias. Agarre as ocasiões comuns e as torne grandes.",
+    "A persistência realiza o impossível.",
+    "Seus limites são apenas a sua imaginação.",
+    "Mude seus pensamentos e você mudará seu mundo.",
+    "A vida começa no final da sua zona de conforto.",
+    "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+    "Seja a mudança que você deseja ver no mundo.",
+    "Não pare quando estiver cansado. Pare quando tiver terminado."
+    
 ]
