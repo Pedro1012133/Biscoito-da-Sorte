@@ -17,4 +17,5 @@ FRASES = [
     "Acredite em milagres, mas não dependa deles.",
     "A sorte favorece a mente bem preparada.",
     "Seu esforço será recompensado.",
+    
 ]
