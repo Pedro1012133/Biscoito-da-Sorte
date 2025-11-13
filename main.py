@@ -4,20 +4,16 @@ PROJETO BISCOITO DA SORTE
 
 import flet as ft
 import random
+from models.biscoito_model import BiscoitoModel
 from dados import FRASES
 
-
-# ============================================================================
-# Estado da Aplicação
-# ============================================================================
-contador_cliques = 0
-frase_atual = ""
 
 
 # ============================================================================
 # Função Principal da Aplicação
 # ============================================================================
 def main(page: ft.Page):
+    biscoito_model = BiscoitoModel()
     # Configurações da janela
     page.title = "Biscoito da Sorte"
     page.window_width = 500
@@ -25,8 +21,6 @@ def main(page: ft.Page):
     page.window_resizable = False
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 20
-    
-    global contador_cliques, frase_atual
     
     # ========================================================================
     # Componentes da Interface
@@ -59,7 +53,7 @@ def main(page: ft.Page):
     
     # Contador de cliques
     contador_texto = ft.Text(
-        "Biscoitos abertos: 0",
+        f"Biscoitos abertos: {biscoito_model.get_total_frases()}",
         size=14,
         color="grey600",
         text_align=ft.TextAlign.CENTER,
@@ -72,17 +66,10 @@ def main(page: ft.Page):
         """
         Função chamada quando o botão é clicado.
         """
-        global contador_cliques, frase_atual
-        
-        # Seleciona frase aleatória
-        frase_atual = random.choice(FRASES)
-        
-        # Incrementa contador
-        contador_cliques += 1
         
         # Atualiza o texto da frase na tela
         frase_texto.content = ft.Text(
-            frase_atual,
+            biscoito_model.obter_frase(),
             size=18,
             text_align=ft.TextAlign.CENTER,
             color="amber900",
@@ -90,7 +77,7 @@ def main(page: ft.Page):
         )
         
         # Atualiza o contador na tela
-        contador_texto.value = f"Biscoitos abertos: {contador_cliques}"
+        contador_texto.value = f"Biscoitos abertos: {biscoito_model.get_total_frases()}"
         
         # Atualiza a página
         page.update()
