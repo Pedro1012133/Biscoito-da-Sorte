@@ -14,7 +14,6 @@ class BiscoitoModel:
         frase_escolhida = None
         tentativas = 0
         MAX_TENTATIVAS = 3
-        quantidade_frases_selecionadas = 0
 
         while tentativas < MAX_TENTATIVAS:
             frase_candidata = random.choice(self._frases)
