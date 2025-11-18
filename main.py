@@ -10,11 +10,11 @@ def main(page: ft.Page):
 
     # Instanciação dos objetos
     model = BiscoitoModel()
-    controll = BiscoitoController(objeto_model=model) 
-    view = BiscoitoView(page=page, controller=controll) 
+    controller = BiscoitoController(objeto_model=model) 
+    view = BiscoitoView(page=page, controller=controller) 
 
     # Injeção do View no Controller
-    controll.set_view(view) 
+    controller.set_view(view) 
 
     # Adicionar o Layout na tela
     page.add(view.montar_layout())
