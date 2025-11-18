@@ -1,4 +1,4 @@
-import random
+import random as r
 from dados import FRASES
 
 
@@ -16,7 +16,7 @@ class BiscoitoModel:
         MAX_TENTATIVAS = 3
 
         while tentativas < MAX_TENTATIVAS:
-            frase_candidata = random.choice(self._frases)
+            frase_candidata = r.choice(self._frases)
             
             if frase_candidata != self._frase_anterior:
                 frase_escolhida = frase_candidata
@@ -25,7 +25,7 @@ class BiscoitoModel:
             tentativas += 1
 
         if frase_escolhida is None: 
-            frase_escolhida = random.choice(self._frases) 
+            frase_escolhida = r.choice(self._frases) 
 
         self._frase_anterior = frase_escolhida 
         self._historico.append(frase_escolhida)
