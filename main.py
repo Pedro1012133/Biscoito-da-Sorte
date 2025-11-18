@@ -1,18 +1,11 @@
-"""
-PROJETO BISCOITO DA SORTE
-"""
-
 import flet as ft
-import random
 from models.biscoito_model import BiscoitoModel
-from dados import FRASES
+from views.biscoito_view import BiscoitoView
+from controllers.biscoito_controller import BiscoitoController
 
 
-
-# ============================================================================
-# Função Principal da Aplicação
-# ============================================================================
 def main(page: ft.Page):
+<<<<<<< HEAD
     biscoito_model = BiscoitoModel()
     
     # Configurações da janela
@@ -163,11 +156,20 @@ def main(page: ft.Page):
             spacing=0,
         )
     )
+=======
+    page.title = "Biscoito da Sorte"
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+>>>>>>> V4
 
+    # Instanciação dos objetos
+    model = BiscoitoModel()
+    controll = BiscoitoController(objeto_model=model) 
+    view = BiscoitoView(page=page, controller=controll) 
 
+    # Injeção do View no Controller
+    controll.set_view(view) 
 
-# ============================================================================
-# Execução
-# ============================================================================
-if __name__ == "__main__":
-    ft.app(target=main)
+    # Adicionar o Layout na tela
+    page.add(view.montar_layout())
+
+ft.app(target=main)
