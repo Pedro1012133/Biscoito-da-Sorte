@@ -115,3 +115,4 @@ class BiscoitoModel:
             conteudo += f"ID: {item['id']} | Data/Hora: {item['data_hora']} | Frase: {item['frase']}\n"
             
         return conteudo, nome_arquivo
+        
