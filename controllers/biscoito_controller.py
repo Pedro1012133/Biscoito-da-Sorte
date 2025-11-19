@@ -17,28 +17,34 @@ class BiscoitoController:
         
     def clique_abrir_biscoito(self, e):
         obter_frase = self.model.obter_frase()
-        get_total_frases = self.model.get_total_frases()
+        get_total_frases_favoritas = self.model.get_total_frases_favoritas()
         
         if self.view:
-            self.view.atualizar_frase(obter_frase, get_total_frases)
+            self.view.atualizar_frase(obter_frase, get_total_frases_favoritas)
 
 
 
     def clique_resetar_historico(self, e):
         self.model.resetar_historico()
-        get_total_frases = self.model.get_total_frases()
+        get_total_frases_favoritas = self.model.get_total_frases_favoritas()
 
         if self.view:
-            self.view.resetar(get_total_frases)
+            self.view.resetar(get_total_frases_favoritas)
             self.view.exibir_mensagem_sucesso("Histórico de aberturas limpo!")
 
 
 
+    def clique_exibir_frases_favoritas(self, e):
+        if self.model.registrar_frase_favorita() == True:
+            frase_atual = self.model._frase_atual
+
+
+
     def buscar_e_atualizar_contador(self):
-        get_total_frases = self.model.get_total_frases()
+        get_total_frases_favoritas = self.model.get_total_frases_favoritas()
 
         if self.view:
-            self.view.exibir_contador(get_total_frases)
+            self.view.exibir_contador(get_total_frases_favoritas)
 
 
 
